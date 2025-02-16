@@ -57,15 +57,6 @@ jobs:
           cd ${{ env.LOCAL_DEV_REPOSITORY }}
           bun install
 
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
-
       # Build the Next.js project
       - name: Build with Next.js
         run: |

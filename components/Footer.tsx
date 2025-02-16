@@ -6,9 +6,9 @@ export default function Footer() {
 			<footer className="py-14">
 				<div className="mx-auto w-full px-6 xs:px-7 sm:px-10 max-w-screen-lg flex flex-col gap-11 md:flex-row">
 					<div className="flex-1">
-						<a href="/" className="ml-0.5">
+						<Link href="/yawarakaSupport" className="ml-0.5">
 							やわらかITサポート
-						</a>
+						</Link>
 						<p className="text-gray-600 text-xs mt-1">
 							パソコンやスマホの「ちょっと困った」を
 							<br />

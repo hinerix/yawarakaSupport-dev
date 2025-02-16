@@ -115,7 +115,7 @@ export default function About() {
 										<p className="mt-2">LP制作</p>
 										<p className="mt-4">
 											<Link
-												href="/case-study/byework"
+												href="/yawarakaSupport/case-study/byework"
 												className="text-blue-400 hover:text-blue-300 duration-500 underline underline-offset-4 decoration-dotted"
 											>
 												インタビューを見る →

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
 	return (
 		<div>
@@ -16,26 +18,26 @@ export default function Footer() {
 
 					<div className="flex gap-6 md:gap-24">
 						<div className="mt-1 whitespace-nowrap flex flex-col gap-4 text-sm flex-1">
-							<a
-								href="/"
+							<Link
+								href="/yawarakaSupport"
 								className="text-gray-600 hover:text-blue-400 duration-500"
 							>
 								ホーム
-							</a>
-							<a
-								href="/about"
+							</Link>
+							<Link
+								href="/yawarakaSupport/about"
 								className="text-gray-600 hover:text-blue-400 duration-500"
 							>
 								使い方
-							</a>
+							</Link>
 						</div>
 						<div className="mt-1 whitespace-nowrap flex flex-col gap-4 text-sm flex-1">
-							<a
-								href="/terms"
+							<Link
+								href="/yawarakaSupport/terms"
 								className="text-gray-600 hover:text-blue-400 duration-500"
 							>
 								規約とポリシー
-							</a>
+							</Link>
 							<a
 								href="https://forms.gle/kqDmMQxbXq7x1VTd9"
 								target="_blank"

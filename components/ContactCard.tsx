@@ -23,7 +23,7 @@ export default function ContactCard() {
 				</div>
 				<div className="mt-4 mb-2 flex justify-end sm:mt-6">
 					<Image
-						src="/images/contactCard/contactCard.png"
+						src="/yawarakaSupport/images/contactCard/contactCard.png"
 						alt="Home"
 						width={200}
 						height={200}

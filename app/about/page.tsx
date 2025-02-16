@@ -14,7 +14,7 @@ export default function About() {
 						<header className="flex flex-col items-center">
 							<h1 className="text-xl">このサービスについて</h1>
 							<Image
-								src="/images/about/about.png"
+								src="/yawarakaSupport/images/about/about.png"
 								alt="About"
 								width={200}
 								height={200}
@@ -38,7 +38,7 @@ export default function About() {
 							</h2>
 							<p className="mt-6">
 								<Image
-									src="/images/about/consulting.png"
+									src="/yawarakaSupport/images/about/consulting.png"
 									alt="お悩み相談_画像"
 									width={200}
 									height={200}
@@ -89,7 +89,7 @@ export default function About() {
 							</h2>
 							<p className="mt-6">
 								<Image
-									src="/images/about/website.png"
+									src="/yawarakaSupport/images/about/website.png"
 									alt="Webサイト/LP制作_画像"
 									width={200}
 									height={200}
@@ -102,7 +102,7 @@ export default function About() {
 							<div className="mt-4">
 								<div className="rounded-3xl border space-x-12 border-gray-200 p-7 sm:flex sm:p-8">
 									<Image
-										src="/images/caseStudies/Byeバイト.png"
+										src="/yawarakaSupport/images/caseStudies/Byeバイト.png"
 										alt="Byeバイト/LP制作_画像"
 										width={250}
 										height={250}
@@ -158,7 +158,7 @@ export default function About() {
 							</h2>
 							<p className="mt-6">
 								<Image
-									src="/images/about/price.png"
+									src="/yawarakaSupport/images/about/price.png"
 									alt="ご利用料金_画像"
 									width={200}
 									height={200}

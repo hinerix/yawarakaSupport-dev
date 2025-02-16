@@ -34,7 +34,7 @@ export default function Byework() {
 							<h1 className="text-xl">[インタビュー] 退職代行 Byeバイト</h1>
 							<p className="mt-4">2025/02/14 更新</p>
 							<Image
-								src="/images/caseStudies/Byeバイト.png"
+								src="/yawarakaSupport/images/caseStudies/Byeバイト.png"
 								alt="Byeバイト_画像"
 								width={1080}
 								height={720}

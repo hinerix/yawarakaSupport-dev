@@ -10,7 +10,7 @@ export default function Home() {
 				<section className="pt-24">
 					<header className="flex flex-col items-center">
 						<Image
-							src="/images/home/home.png"
+							src="/yawarakaSupport/images/home/home.png"
 							alt="Home"
 							width={200}
 							height={200}

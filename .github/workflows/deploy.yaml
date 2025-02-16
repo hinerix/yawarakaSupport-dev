@@ -11,9 +11,9 @@ env:
   BOT_GITHUB_NAME: github-actions[bot]
   BOT_GITHUB_MAIL: 41898282+github-actions[bot]@users.noreply.github.com
   # 開発用リポジトリ (github_user は github アカウント名)
-  REMOTE_DEV_REPOSITORY: hinericubix/yawarakaSupport-dev
+  REMOTE_DEV_REPOSITORY: hinerix/yawarakaSupport-dev
   # 本番用リポジトリ (github_user は github アカウント名)
-  REMOTE_PROD_REPOSITORY: hinericubix/yawarakaSupport
+  REMOTE_PROD_REPOSITORY: hinerix/yawarakaSupport
   # 開発用リポジトリのローカルでのディレクトリ名
   LOCAL_DEV_REPOSITORY: devDir
   # 本番用リポジトリのローカルでのディレクトリ名

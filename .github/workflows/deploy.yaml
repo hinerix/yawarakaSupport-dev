@@ -1,0 +1,92 @@
+# Workflow for building and deploying a Next.js site to GitHub Pages using Bun
+
+name: Deploy prod
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  # actionsで公開リポジトリにpushする際に使用するBOTの名前とメールアドレス
+  BOT_GITHUB_NAME: github-actions[bot]
+  BOT_GITHUB_MAIL: 41898282+github-actions[bot]@users.noreply.github.com
+  # 開発用リポジトリ (github_user は github アカウント名)
+  REMOTE_DEV_REPOSITORY: hinericubix/yawarakaSupport-dev
+  # 本番用リポジトリ (github_user は github アカウント名)
+  REMOTE_PROD_REPOSITORY: hinericubix/yawarakaSupport
+  # 開発用リポジトリのローカルでのディレクトリ名
+  LOCAL_DEV_REPOSITORY: devDir
+  # 本番用リポジトリのローカルでのディレクトリ名
+  LOCAL_PROD_REPOSITORY: prodDir
+  # 作成したPERSONAL_ACCESS_TOKENの格納場所
+  ## Settings -> Secrets and variables -> Actions -> Repository secrets -> New repository secret
+  PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      # Checkout the repository
+      - name: Checkout ${{ env.LOCAL_DEV_REPOSITORY }} repository
+        run: |
+          set -x
+          git -v
+          git clone -b main --depth=1 https://${{ env.PAT }}@github.com/${{ env.REMOTE_DEV_REPOSITORY }}.git ${{ env.LOCAL_DEV_REPOSITORY }}
+
+      - name: Checkout ${{ env.LOCAL_PROD_REPOSITORY}} repository
+        run: |
+          set -x
+          git -v
+          git clone -b main --single-branch https://${{ env.PAT }}@github.com/${{ env.REMOTE_PROD_REPOSITORY }}.git ${{ env.LOCAL_PROD_REPOSITORY }}
+          cd ${{ env.LOCAL_PROD_REPOSITORY }}
+          git clean -fdx && test $(git ls-files | wc -l) -eq 0 || ls | grep -v "README.md" | xargs git rm -rf
+
+      # Install Bun
+      - name: Install Bun
+        run: |
+          set -x
+          curl -fsSL https://bun.sh/install | bash
+          echo "export BUN_INSTALL=\"$HOME/.bun\"" >> $GITHUB_ENV
+          echo "export PATH=\"$HOME/.bun/bin:\$PATH\"" >> $GITHUB_ENV
+          echo "$HOME/.bun/bin" >> $GITHUB_PATH
+
+      # Install dependencies using Bun
+      - name: Install dependencies
+        run: |
+          set -x
+          cd ${{ env.LOCAL_DEV_REPOSITORY }}
+          bun install
+
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
+
+      # Build the Next.js project
+      - name: Build with Next.js
+        run: |
+          set -x
+          cd ${{ env.LOCAL_DEV_REPOSITORY }}
+          bun run build
+
+      - name: Copy build artifacts
+        run: |
+          set -x
+          cp -pr ${{ env.LOCAL_DEV_REPOSITORY }}/out/* ${{ env.LOCAL_PROD_REPOSITORY }}/
+          cd ${{ env.LOCAL_PROD_REPOSITORY }}
+          pwd && ls -la
+
+      - name: Commit and push to ${{ env.LOCAL_PROD_REPOSITORY }} repository
+        run: |
+          set -x
+          cd ${{ env.LOCAL_PROD_REPOSITORY }}
+          git -v
+          git config --local user.name "${{ env.BOT_GITHUB_NAME }}"
+          git config --local user.email "${{ env.BOT_GITHUB_MAIL }}"
+          git add .
+          git commit -m "generated"
+          git push -u origin main

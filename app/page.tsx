@@ -30,7 +30,7 @@ export default function Home() {
 						<p>そんな方々のための拠り所です。</p>
 						<p>
 							<Link
-								href="/yawarakaSupport/about"
+								href="/about"
 								className="text-blue-400 hover:text-blue-300 duration-500 underline underline-offset-4 decoration-dotted"
 							>
 								できることを見る →

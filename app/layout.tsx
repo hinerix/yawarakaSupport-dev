@@ -8,9 +8,21 @@ const genJyuuGothic = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "やわらかITサポート",
+	title: "やわらかITサポート | パソコンやスマホの「ちょっと困った」を気軽に相談できるサービス",
 	description:
 		"やわらかITサポートはパソコンやスマホの「ちょっと困った」を気軽に相談できるサービスです。",
+	openGraph: {
+		title:
+			"やわらかITサポート | パソコンやスマホの「ちょっと困った」を気軽に相談できるサービス",
+		description:
+			"パソコンやスマホの「ちょっと困った」を気軽に相談できるサービス",
+		url: "https://hinerix.github.io/yawarakaSupport/",
+		images: [{ url: "https://hinerix.github.io/yawarakaSupport/images/home/home.png" }],
+		siteName: "やわらかITサポート",
+	},
+	icons: {
+		icon: "/favicon.ico",
+	},
 };
 
 export default function RootLayout({
@@ -24,27 +36,6 @@ export default function RootLayout({
 			className={`scroll-smooth ${genJyuuGothic.className}`}
 			suppressHydrationWarning
 		>
-			<head>
-				<script type="application/ld+json" id="org-schema">
-					{JSON.stringify({
-						"@context": "https://schema.org",
-						"@type": "Organization",
-						name: "Enterprise Solutions",
-						url: "https://enterprise-solutions.com",
-						logo: "https://enterprise-solutions.com/logo.png",
-						description:
-							"Leading enterprise solutions provider helping businesses transform digitally.",
-						address: {
-							"@type": "PostalAddress",
-							streetAddress: "123 Business Avenue",
-							addressLocality: "San Francisco",
-							addressRegion: "CA",
-							postalCode: "94105",
-							addressCountry: "US",
-						},
-					})}
-				</script>
-			</head>
 			<body className="bg-amber-50 text-gray-900 selection:bg-sky-100">
 				{children}
 			</body>

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 		siteName: "やわらかITサポート",
 	},
 	icons: {
-		icon: "/favicon.ico",
+		icon: "/yawarakaSupport/favicon.ico",
 	},
 };
 

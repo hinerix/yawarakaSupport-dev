@@ -20,7 +20,7 @@ export default function Specified() {
 
 					<section className="mt-12">
 						<h2 className="border-b border-gray-200 pb-2 text-lg">
-							事業者名、事業者の所在、電話番号
+							事業者の所在、電話番号
 						</h2>
 						<div className="mt-4 text-sm">
 							<p>

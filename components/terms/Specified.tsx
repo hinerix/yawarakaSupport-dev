@@ -6,21 +6,10 @@ export default function Specified() {
 			<div>
 				<h1 className="text-lg">特定商取引法に基づく表記</h1>
 				<div>
-					<section className="mt-12">
-						<h2 className="border-b border-gray-200 pb-2 text-lg">
-							事業者名
-						</h2>
-						<div className="mt-4 text-sm">
-							<p>
-								屋号：ひねりキュービックス
-							</p>
-							<p className="mt-2 text-sm">氏名：有吉 正希</p>
-						</div>
-					</section>
 
 					<section className="mt-12">
 						<h2 className="border-b border-gray-200 pb-2 text-lg">
-							事業者の所在、電話番号
+							事業者名、事業者の所在、電話番号
 						</h2>
 						<div className="mt-4 text-sm">
 							<p>

@@ -2,15 +2,15 @@
 	"name": "nextjs",
 	"version": "0.1.0",
 	"dependencies": {
-		"@next/swc-wasm-nodejs": "^15.1.7",
-		"@tailwindcss/postcss": "^4.0.6",
+		"@next/swc-wasm-nodejs": "^15.5.6",
+		"@tailwindcss/postcss": "^4.1.17",
 		"lucide-react": "^0.446.0",
-		"next": "^15.1.7",
-		"postcss": "^8.5.2",
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"tailwindcss": "^4.0.6",
-		"typescript": "^5.7.3"
+		"next": "^15.5.6",
+		"postcss": "^8.5.6",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
+		"tailwindcss": "^4.1.17",
+		"typescript": "^5.9.3"
 	},
 	"private": true,
 	"scripts": {
@@ -19,12 +19,14 @@
 		"start": "serve out/",
 		"lint": "biome check --write"
 	},
-	"trustedDependencies": ["@biomejs/biome"],
+	"trustedDependencies": [
+		"@biomejs/biome"
+	],
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/node": "^22.13.4",
-		"@types/react": "^19.0.9",
-		"@types/react-dom": "^19.0.3",
-		"serve": "^14.2.4"
+		"@types/node": "^22.19.1",
+		"@types/react": "^19.2.7",
+		"@types/react-dom": "^19.2.3",
+		"serve": "^14.2.5"
 	}
 }

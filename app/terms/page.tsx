@@ -1,6 +1,6 @@
+import { Suspense } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Suspense } from "react";
 import TermsContent from "./TermsContent";
 
 export default function Terms() {

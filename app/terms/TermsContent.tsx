@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import Privacy from "@/components/terms/Privacy";
 import Specified from "@/components/terms/Specified";
 import Tos from "@/components/terms/Tos";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
 export default function TermsContent() {
 	const searchParams = useSearchParams();

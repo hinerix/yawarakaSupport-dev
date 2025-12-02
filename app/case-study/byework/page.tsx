@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
+import { useEffect, useState } from "react";
 import ContactCard from "@/components/ContactCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 
 export default function Byework() {
 	const [toc, setToc] = useState<Array<{ id: string; text: string }>>([]);

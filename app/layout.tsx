@@ -8,7 +8,8 @@ const genJyuuGothic = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "やわらかITサポート | パソコンやスマホの「ちょっと困った」を気軽に相談できるサービス",
+	title:
+		"やわらかITサポート | パソコンやスマホの「ちょっと困った」を気軽に相談できるサービス",
 	description:
 		"やわらかITサポートはパソコンやスマホの「ちょっと困った」を気軽に相談できるサービスです。",
 	openGraph: {
@@ -17,7 +18,9 @@ export const metadata: Metadata = {
 		description:
 			"パソコンやスマホの「ちょっと困った」を気軽に相談できるサービス",
 		url: "https://hinerix.github.io/yawarakaSupport/",
-		images: [{ url: "https://hinerix.github.io/yawarakaSupport/images/home/home.png" }],
+		images: [
+			{ url: "https://hinerix.github.io/yawarakaSupport/images/home/home.png" },
+		],
 		siteName: "やわらかITサポート",
 	},
 	icons: {

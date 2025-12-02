@@ -1,7 +1,7 @@
-import ContactCard from "@/components/ContactCard";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import ContactCard from "@/components/ContactCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 	return (

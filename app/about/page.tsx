@@ -1,8 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
 import ContactCard from "@/components/ContactCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function About() {
 	return (

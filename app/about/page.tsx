@@ -202,7 +202,7 @@ export default function About() {
 											<li>公開</li>
 										</ul>
 										<div className="mt-2 text-sm text-gray-600 space-y-0.5">
-											<p>※上記金額はあくまで目安です。</p>
+											<p>※ 上記金額はあくまで目安です。</p>
 											<p>
 												Webサイトの構成やご要望によってお見積りが変動いたします。
 											</p>
